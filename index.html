@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>영화 그 이상의 감동. CGV</title>
+    
+    <!-- 브라우저 아이콘 -->
+    <!-- <link rel="shortcut icon" href="https://img.cgv.co.kr/theater_img/favicon.ico" type="image/x-icon"> -->
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/webfont.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    <!-- jquery 최신버전 -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script>
+        $(document).ready(function() {
+            // 비디오 자동재생 컨트롤
+            $(".playStop").click(function() {
+                $(this).toggleClass('active');
+
+                if($(this).hasClass('active')) {
+                    $("video").get(0).pause();
+                } else {
+                    $("video").get(0).play();
+                }
+            });
+            
+            // 비디오 음소거 컨트롤
+            $(".soundOnOff").click(function() {
+                $(this).toggleClass('active');
+
+                if($(this).hasClass('active')) {
+                    $("video").prop('muted', true);  // 음소거
+                } else {
+                    $("video").prop('muted', false);  // 음소거 해제
+                }
+            });
+
+            // 비디오 종료되면 재생버튼으로 전환
+            $("video").on("ended", function() {
+                $(".playStop").addClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="ad-top">
+        <div class="ad-top-wrap">
+            <a href="#"><img src="/assets/img/haikyuu.jpg" alt="극장판 하이큐!! 쓰레기장의 결전" border="0"></a>
+            <button type="button"></button>
+        </div>
+    </div>
+    <!-- // ad-top -->
+    <header>
+        <div class="contaniner">
+            <div class="logo">
+                <a href="#"><img src="/assets/img/logoRed.png" alt="CGV"></a>
+                <span>CULTUREPLEX</span>
+            </div>
+            <div class="memberInfo_wrap">
+                <a href="#"><img src="/assets/img/card1.png" alt="현대M포인트"></a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/loginPassword.png" alt="로그인">
+                            <span>로그인</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/loginJoin.png" alt="회원가입">
+                            <span>회원가입</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/loginMember.png" alt="MY CGV">
+                            <span>MY CGV</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/loginCustomer.png" alt="고객센터">
+                            <span>고객센터</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-border"></div>
+        <div class="nav">
+            <div class="contaniner">
+                <ul class="nav_menu">
+                    <li><a href="#">영화</a></li>
+                    <li><a href="#">극장</a></li>
+                    <li><a href="#" class="strong">예매</a></li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">혜택</a></li>
+                </ul>
+                <div class="search_wrap">
+                    <input name="" type="text" value="">
+                    <button type="button">검색</button>
+                </div>
+            </div>
+            <div class="sub-menu"></div>
+        </div>
+    </header>
+    <div class="movie_wrap">
+        <div class="contaniner">
+            <video autoplay muted>
+                <source src="https://adimg.cgv.co.kr/images/202404/Devil/0508_Devil_1080x608.mp4" type="video/mp4">
+            </video>
+            <strong class="title">악마와의토크쇼</strong>
+            <span class="txt">47년만에 공개 생중계 공포<br>사상 최악의 방송 사고!</span>
+            <div class="controller_wrap">
+                <a href="#" class="detailView">상세보기</a>
+                <a href="#none" class="playStop">Stop</a>
+                <a href="#none" class="soundOnOff">Sound On</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
