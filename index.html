@@ -33,7 +33,7 @@
                     $("video").get(0).play();
                 }
             });
-            
+
             // 비디오 음소거 컨트롤
             $(".soundOnOff").click(function() {
                 $(this).toggleClass('active');
@@ -48,6 +48,16 @@
             // 비디오 종료되면 재생버튼으로 전환
             $("video").on("ended", function() {
                 $(".playStop").addClass('active');
+            });
+
+            // 무비차트 tab 이벤트
+            $("#btnMovie").click(function() {
+                $(".movieChart_list").hide();
+                $("#movie_list").show();
+            });
+            $("#btnReserMovie").click(function() {
+                $(".movieChart_list").hide();
+                $("#reserMovie_list").show();
             });
         });
     </script>
@@ -115,6 +125,7 @@
             <div class="sub-menu"></div>
         </div>
     </header>
+    <!-- // header -->
     <div class="movie_wrap">
         <div class="contaniner">
             <video autoplay muted>
@@ -129,5 +140,184 @@
             </div>
         </div>
     </div>
+    <!-- // movie_wrap -->
+    <div class="movieChart_wrap">
+        <div class="contaniner">
+            <div class="movieChart_btn_wrap">
+                <div class="tabBtn_wrap">
+                    <a href="#none" class="active" id="btnMovie">무비차트</a>
+                    <a href="#none" id="btnReserMovie">상영예정작</a>
+                </div>
+                <a href="#" class="btn_allView">전체보기</a>
+            </div>
+            <div class="movieChart_list" id="movie_list">무비차트 슬라이드</div>
+            <div class="movieChart_list" id="reserMovie_list">상영예정작 슬라이드</div>
+        </div>
+    </div>
+    <!-- // movieChart_wrap -->
+    <div class="event_wrap">
+        <div class="contaniner">
+            <div class="event_title_wrap">
+                <p>EVENT</p>
+                <div class="eventBtn_wrap">
+                    <a href="#none" class="btn_eventControl active">playStop</a>
+                    <a href="#none" class="btn_allView">전체보기</a>
+                </div>
+            </div>
+            <div class="event_list_wrap">슬라이드 자리</div>
+        </div>
+    </div>
+    <!-- // event_wrap -->
+    <div class="specialHall_wrap">
+        <div class="contaniner">
+            <div class="specialHall_title_wrap">
+                <p>특별관</p>
+                <a href="#" class="btn_allView">전체보기</a>
+            </div>
+            <div class="specialHall_content">
+                <a href="#" class="specialHall_link"></a>
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <p>SUITE CINEMA</p>
+                            <span>#호텔 컨셉의 프리미엄관</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>CINE &amp; LIVINGROOM</p>
+                            <span>#신개념 소셜 상영관</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>4DX</p>
+                            <span>#모션시트 #오감체험</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>CINE de CHEF</p>
+                            <span>#쉐프가 있는 영화관</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- // specialHall_wrap -->
+    <div class="giftcon_wrap">
+        <div class="contaniner">
+            <ul>
+                <li>
+                    <div class="giftcon_content_title_wrap">
+                        <p>패키지</p>
+                        <a href="#" alt="패키지">더보기</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/16778218049340.jpg" alt="우리 패키지">
+                        <div>
+                            <span>우리 패키지</span>
+                            <strong>61,000원</strong>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/16778214176450.jpg" alt="나랑 너 패키지">
+                        <div>
+                            <span>나랑 너 패키지</span>
+                            <strong>34,000원</strong>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/16778206767040.jpg" alt="좋은 날 패키지">
+                        <div>
+                            <span>좋은 날 패키지</span>
+                            <strong>18,000원</strong>
+                        </div>
+                    </a>
+                </li>
+                <!-- // 패키지 -->
+                <li>
+                    <div class="giftcon_content_title_wrap">
+                        <p>영화관람권</p>
+                        <a href="#" alt="영화관람권">더보기</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/16777513183750.jpg" alt="CGV 영화관람권">
+                        <div>
+                            <span>CGV 영화관람권</span>
+                            <strong>13,000원</strong>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/16104445886810.jpg" alt="IMAX 영화관람권">
+                        <div>
+                            <span>IMAX 영화관람권</span>
+                            <strong>18,000원</strong>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/16105061088530.jpg" alt="좋은 날 패키지">
+                        <div>
+                            <span>4DX 영화관람권</span>
+                            <strong>19,000원</strong>
+                        </div>
+                    </a>
+                </li>
+                <!-- // 영화관람권 -->
+                <li>
+                    <div class="giftcon_content_title_wrap">
+                        <p>기프트카드</p>
+                        <a href="#" alt="기프트카드">더보기</a>
+                    </div>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15814124358590.jpg" alt="PACONNIE A형">
+                        <div>
+                            <span>PACONNIE A형</span>
+                            <strong>금액충전형</strong>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15814158039890.jpg" alt="PACONNIE B형">
+                        <div>
+                            <span>PACONNIE B형</span>
+                            <strong>금액충전형</strong>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15814162227570.jpg" alt="PACONNIE C형">
+                        <div>
+                            <span>PACONNIE C형</span>
+                            <strong>금액충전형</strong>
+                        </div>
+                    </a>
+                </li>
+                <!-- // 기프트카드 -->
+            </ul>
+        </div>
+    </div>
+    <!-- // giftcon_wrap -->
+    <div class="notice_wrap">
+        <div class="contaniner">
+            <div class="notice_container">
+                <div class="notice_content_wrap">
+                    <div class="notice_content">
+                        <strong>공지사항</strong>
+                        <a href="#" class="btn_link">[행사/이벤트][웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
+                        <a href="#" class="btn_more">더보기</a>
+                    </div>
+                    <div class="client_wrap"></div>
+                </div>
+                <div class="qr_wrap">
+                    <strong>앱 다운로드</strong>
+                    <span>CGV앱에서 더 편리하게 이용하세요</span>
+                    <img src="https://img.cgv.co.kr/R2014/images/common/img_qrcode.gif" alt="QR CODE">
+                    <p>QR코드를 스캔하고<br>앱설치 페이지로 바로 이동하세요</p>
+                </div>
+            </div>
+            <a href="#" class="ad_wrap"><img src="https://adimg.cgv.co.kr/images/202308/CGV/wooricard/226x259.png" width="211" height="238" border="0" alt="광고-우리은행"></a>
+        </div>
+    </div>
+    <!-- // notice_wrap -->
 </body>
 </html>
