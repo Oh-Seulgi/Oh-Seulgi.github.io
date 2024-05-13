@@ -59,6 +59,22 @@
                 $(".movieChart_list").hide();
                 $("#reserMovie_list").show();
             });
+
+            // 스크롤 이벤트
+            $(window).scroll(function(){
+                var headerTop = $("header").offset().top;           // header의 화면 위쪽에서부터의 거리
+                var headerHeight = $("header").outerHeight(true);   // header의 외부 높이(true = 마진을 포함한 값)
+                var fixedH = headerTop + headerHeight;              // 고정 헤더가 시작되는 위치 = header의 끝 부분
+                var currentScrollTop = $(document).scrollTop();     // 현재 스크롤 위치
+                
+                if(currentScrollTop >= fixedH) {    // 현재 스크롤 위치가 고정 헤더의 시작 위치보다 크거나 같다면
+                    $("header .nav").addClass('fixed');
+                    $(".fixedBtn_wrap").addClass('active');
+                } else {
+                    $("header .nav").removeClass('fixed');
+                    $(".fixedBtn_wrap").removeClass('active');
+                }
+            });
         });
     </script>
 </head>
@@ -109,6 +125,7 @@
         <div class="header-border"></div>
         <div class="nav">
             <div class="contaniner">
+                <a href="#"><img src="/assets/img/logoWhite.png" alt="CGV"></a>
                 <ul class="nav_menu">
                     <li><a href="#">영화</a></li>
                     <li><a href="#">극장</a></li>
@@ -306,7 +323,19 @@
                         <a href="#" class="btn_link">[행사/이벤트][웡카] 4DX 신규 초콜릿향 진행극장 변경 안내 (1/31~2/6)</a>
                         <a href="#" class="btn_more">더보기</a>
                     </div>
-                    <div class="client_wrap"></div>
+                    <div class="client_wrap">
+                        <strong>고객센터</strong>
+                        <div class="client_list">
+                            <strong>1544-1122</strong>
+                            <span>고객센터 운영시간 (평일 09:00~18:00)</span>
+                            <p>업무시간 외 자동응답 안내 가능합니다.</p>
+                        </div>
+                    </div>
+                    <div class="client_btn_wrap">
+                        <a href="#">FAQ</a>
+                        <a href="#">1:1 문의</a>
+                        <a href="#">대관/단체 문의</a>
+                    </div>
                 </div>
                 <div class="qr_wrap">
                     <strong>앱 다운로드</strong>
@@ -319,5 +348,78 @@
         </div>
     </div>
     <!-- // notice_wrap -->
+    <footer>
+        <div class="contaniner">
+            <nav>
+                <a href="#">회사소개</a>
+                <a href="#">지속가능경영</a>
+                <a href="#">IR</a>
+                <a href="#">채용정보</a>
+                <a href="#">광고/제휴/출점문의</a>
+                <a href="#">이용약관</a>
+                <a href="#">편성기준</a>
+                <a href="#"><strong>개인정보처리방침</strong></a>
+                <a href="#">법적고지</a>
+                <a href="#">이메일주소무단수집거부</a>
+                <a href="#">윤리경영</a>
+                <a href="#">사이버검사실</a>
+            </nav>
+            <div class="footer_info">
+                <div class="company_info">
+                    <address>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
+                    <dl>
+                        <dt>대표이사</dt>
+                        <dd>허민회</dd>
+                        <dt>사업자등록번호</dt>
+                        <dd>104-81-45690</dd>
+                        <dt>통신판매업신고번호</dt>
+                        <dd>2017-서울용산-0662 <a href="#" class="btn_goFtc">사업자정보확인</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>호스팅사업자</dt>
+                        <dd>CJ올리브네트웍스</dd>
+                        <dt>개인정보보호 책임자</dt>
+                        <dd>도형구</dd>
+                        <dt>대표이메일</dt>
+                        <dd>cjcgvmaster@cj.net</dd>
+                    </dl>
+                    <p>© CJ CGV. All Rights Reserved</p>
+                </div>
+                <div class="familysite_wrap">
+                    <select id="familysite">
+                        <option value="" class="familysiteTitle">계열사 바로가기</option>
+                        <optgroup label="CJ그룹">
+                        <option value="http://www.cj.net/">CJ주식회사</option>
+                        </optgroup><optgroup label="식품 &amp; 식품서비스">
+                        <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
+                        <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
+                        <option value="http://www.cjfreshway.com/index.jsp">CJ프레시웨이</option>
+                        </optgroup><optgroup label="생명공학">
+                        <option value="https://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
+                        <option value="https://www.cj.co.kr/kr/about/business/bio">CJ Feed&amp;Card</option>
+                        </optgroup><optgroup label="물류 &amp; 신유통">
+                        <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
+                        <option value="http://www.cjenc.co.kr/kr/Default.asp">CJ대한통운 건설부문</option>
+                        <option value="https://www.oliveyoung.co.kr/store/company/brandStory.do">CJ올리브영</option>
+                        <option value="https://www.cjolivenetworks.co.kr:449/">CJ올리브네트웍스</option>
+                        <option value="https://www.cjoshopping.com:9002/index.asp">CJ ENM 커머스부문</option>
+                        </optgroup><optgroup label="엔터테인먼트 &amp; 미디어">
+                        <option value="https://www.cjenm.com/ko/">CJ ENM 엔터테인먼트부문</option>
+                        <option value="http://corp.cgv.co.kr/">CJ CGV</option>
+                        </optgroup>
+                    </select>
+                    <a href="#">GO</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- // footer -->
+    <div class="fixedBtn_wrap">
+        <div class="contaniner">
+            <a href="#" class="btn_ticketing">예매하기</a>
+            <a href="#" class="btn_gotoTop"></a>
+        </div>
+    </div>
+    <!-- // fixedBtn_wrap -->
 </body>
 </html>
