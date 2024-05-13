@@ -75,6 +75,17 @@
                     $(".fixedBtn_wrap").removeClass('active');
                 }
             });
+
+            // 특별관 마우스오버 이벤트
+            $(".specialHall_content ul li").mouseover(function() {
+                $(".specialHall_content ul li").removeClass("active");
+                $(this).addClass("active");
+                
+                var index = $(this).index() + 1;    // 현재 li가 몇 번째 요소인지 확인
+                var _url = "url('/assets/img/specialHall_content" + index + ".png')";
+
+                $(".specialHall_wrap .specialHall_content > a").css("background-image", _url);
+            });
         });
     </script>
 </head>
