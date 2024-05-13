@@ -86,6 +86,32 @@
 
                 $(".specialHall_wrap .specialHall_content > a").css("background-image", _url);
             });
+
+            // EVENT 슬라이드
+            var eventSwiper = new Swiper(".event_list_wrap", {
+                slidesPerView: 3,  
+                slidesPerGroup: 3,
+                spaceBetween: 24,   // 슬라이드 사이 여백
+                centeredSlides: false,  // false로 바꾸면 왼쪽부터 순차적으로 슬라이드가 들어섬
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false, // false-스와이프 후 자동 재생
+                },
+                navigation: {
+                    nextEl: ".event_list_wrap .swiper-button-next",
+                    prevEl: ".event_list_wrap .swiper-button-prev",
+                },
+            });
+            // EVENT 슬라이드 재생/멈춤
+            $(".btn_eventControl").click(function(){
+                if (eventSwiper.autoplay.running) {
+                    $(this).addClass('active');
+                    eventSwiper.autoplay.stop();
+                } else {
+                    $(this).removeClass('active');
+                    eventSwiper.autoplay.start();
+                }
+            });
         });
     </script>
 </head>
@@ -188,11 +214,59 @@
             <div class="event_title_wrap">
                 <p>EVENT</p>
                 <div class="eventBtn_wrap">
-                    <a href="#none" class="btn_eventControl active">playStop</a>
+                    <a href="#none" class="btn_eventControl">playStop</a>
                     <a href="#none" class="btn_allView">전체보기</a>
                 </div>
             </div>
-            <div class="event_list_wrap">슬라이드 자리</div>
+            <div class="event_list_wrap swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/40413/17144588012630.jpg" alt="[혹성탈출-새로운시대]IMAX 포스터">
+                            <strong>[혹성탈출-새로운시대]IMAX 포스터</strong>
+                            <span>2024.04.30~2024.05.14</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/40412/17144613187210.jpg" alt="[혹성탈출-새로운시대]4DX 포스터">
+                            <strong>[혹성탈출-새로운시대]4DX 포스터</strong>
+                            <span>2024.04.30~2024.05.14</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/40411/17144615086560.jpg" alt="[혹성탈출-새로운시대]SCREENX 포스터">
+                            <strong>[혹성탈출-새로운시대]SCREENX 포스터</strong>
+                            <span>2024.05.01~2024.05.14</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/39599/17059006425860.jpg" alt="내 통신사 혜택 확인하고CGV 영화 할인 받자!">
+                            <strong>내 통신사 혜택 확인하고CGV 영화 할인 받자!</strong>
+                            <span>2024.02.01~2026.01.31</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/40509/17152994005120.jpg" alt="[극장판 하이큐!!] IMAXN차 관람 이벤트">
+                            <strong>[극장판 하이큐!!] IMAXN차 관람 이벤트</strong>
+                            <span>2024.05.10~2024.05.21</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/40338/17131432126120.jpg" alt="[MOINTSX인티N] 사유하는 목요일 (김호영)">
+                            <strong>[MOINTSX인티N] 사유하는 목요일 (김호영)</strong>
+                            <span>2024.05.13~2024.06.11</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-navi swiper-button-prev"></div>
+                <div class="swiper-navi swiper-button-next"></div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- // event_wrap -->

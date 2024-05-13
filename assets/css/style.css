@@ -389,6 +389,10 @@ header .nav.fixed .search_wrap:before, header .nav.fixed .search_wrap:after {
   padding: 60px 0 6px;
 }
 
+.event_wrap .contaniner {
+  position: relative;
+}
+
 .event_wrap .event_title_wrap {
   display: flex;
   align-items: center;
@@ -412,10 +416,14 @@ header .nav.fixed .search_wrap:before, header .nav.fixed .search_wrap:after {
   width: 28px;
   height: 28px;
   font-size: 0;
-  background: transparent url(/assets/img/playBlack.png) 10px center / 11px 15px scroll no-repeat;
+  background: transparent url(/assets/img/stop.png) 10px center / 11px 15px scroll no-repeat;
   border: 1px solid #e3e3e3;
   border-radius: 50%;
   margin-right: 4px;
+}
+
+.event_wrap .event_title_wrap .eventBtn_wrap .btn_eventControl.active {
+  background: transparent url(/assets/img/playBlack.png) 10px center / 11px 15px scroll no-repeat;
 }
 
 .event_wrap .event_title_wrap .eventBtn_wrap .btn_allView {
@@ -430,8 +438,78 @@ header .nav.fixed .search_wrap:before, header .nav.fixed .search_wrap:after {
 }
 
 .event_wrap .event_list_wrap {
-  /* overflow: hidden; */
+  overflow: hidden;
   margin-top: 19px;
+}
+
+.event_wrap .event_list_wrap ul {
+}
+
+.event_wrap .event_list_wrap ul li {
+}
+
+.event_wrap .event_list_wrap ul li a {
+  display: block;
+}
+
+.event_wrap .event_list_wrap ul li a img {
+  width: 310px;
+  height: 207px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.event_wrap .event_list_wrap ul li a strong {
+  display: block;
+  overflow: hidden;
+  margin-top: 16px;
+  font-size: 18px;
+  color: #222;
+  line-height: 1.444em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.event_wrap .event_list_wrap ul li a span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.429em;
+}
+
+/* .event_wrap .event_list_wrap .swiper-navigation {
+  position: absolute;
+  top: 50%;
+} */
+
+.event_wrap .event_list_wrap .swiper-navi {
+  overflow: hidden;
+  top: calc(50% - -5px);
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.8) url(/assets/img/arrowL.png) center / 9px 13px scroll no-repeat;
+}
+
+.event_wrap .event_list_wrap .swiper-button-prev {
+  left: -20px;
+}
+
+.event_wrap .event_list_wrap .swiper-button-next {
+  right: -20px;
+  transform: rotate(-180deg);
+  box-shadow: -2px -2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.event_wrap .event_list_wrap .swiper-button-prev:after
+, .event_wrap .event_list_wrap .swiper-button-next:after {
+  content: '';
+}
+
+.event_wrap .event_list_wrap .swiper-button-disabled {
+  display: none;
 }
 /* event_wrap end */
 
