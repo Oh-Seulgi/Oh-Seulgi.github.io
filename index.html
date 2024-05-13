@@ -87,10 +87,25 @@
                 $(".specialHall_wrap .specialHall_content > a").css("background-image", _url);
             });
 
+            // var movieChartSwiper = new Swiper(".movieChart_list", {
+            //     slidesPerView: 5,   // 한 페이지에 보여줄 슬라이드 개수
+            //     slidesPerGroup: 5,  // 슬라이드 페이지 이동 할 때 그룹으로 묶을 개수
+            //     spaceBetween: 32,   // 슬라이드 사이 여백
+            //     centeredSlides: false,  // false로 바꾸면 왼쪽부터 순차적으로 슬라이드가 들어섬
+            //     // autoplay: {
+            //     //     delay: 2500,
+            //     //     disableOnInteraction: false, // false-스와이프 후 자동 재생
+            //     // },
+            //     navigation: {
+            //         nextEl: ".movieChart_list .swiper-button-next",
+            //         prevEl: ".movieChart_list .swiper-button-prev",
+            //     },
+            // });
+
             // EVENT 슬라이드
             var eventSwiper = new Swiper(".event_list_wrap", {
-                slidesPerView: 3,  
-                slidesPerGroup: 3,
+                slidesPerView: 3,   // 한 페이지에 보여줄 슬라이드 개수
+                slidesPerGroup: 3,  // 슬라이드 페이지 이동 할 때 그룹으로 묶을 개수
                 spaceBetween: 24,   // 슬라이드 사이 여백
                 centeredSlides: false,  // false로 바꾸면 왼쪽부터 순차적으로 슬라이드가 들어섬
                 autoplay: {
@@ -204,8 +219,34 @@
                 </div>
                 <a href="#" class="btn_allView">전체보기</a>
             </div>
-            <div class="movieChart_list" id="movie_list">무비차트 슬라이드</div>
-            <div class="movieChart_list" id="reserMovie_list">상영예정작 슬라이드</div>
+            <div class="movieChart_list" id="movie_list">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="img_wrap">
+                            <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88214/88214_320.jpg" alt="극장판 하이큐!! 쓰레기장의 결전">
+                            <div class="movieAgeLimit_wrap">
+                                <i class="ageAll"><img src="/assets/img/all.svg" alt="ALL"></i>
+                                <i class="ageDay">D - 2</i>
+                             </div>
+                             <div class="screenType_wrap">
+                                <img src="https://img.cgv.co.kr/R2014/images/common/logo/imax_white.png" alt="imax">
+                                <img src="https://img.cgv.co.kr/R2014/images/common/logo/forDX_white.png" alt="forDX">
+                            </div>
+                            <span class="counter">1</span>
+                        </div>
+                        <div class="movie_info_wrap">
+                            <strong>극장판 하이큐!! 쓰레기장의 결전</strong>
+                            <span><img src="https://img.cgv.co.kr/R2014/images/common/egg/eggGoldeneggPreegg.png" alt="Golden Egg Preegg"> 99%</span>
+                            <span>예매율 33.3%</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- // movie_list -->
+            <div class="movieChart_list" id="reserMovie_list">
+                상영예정작 슬라이드
+            </div>
+            <!-- // reserMovie_list -->
         </div>
     </div>
     <!-- // movieChart_wrap -->
