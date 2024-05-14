@@ -94,12 +94,12 @@ header .memberInfo_wrap ul li a span {
 }
 
 header .nav {
-  padding: 5px 0;
+  position: relative;
   border-bottom: 2px solid #fb4357;
 }
 
 header .nav .contaniner {
-  padding: 0;
+  padding: 5px 0;
 }
 
 header .nav .contaniner > a {
@@ -170,6 +170,78 @@ header .nav .search_wrap button {
   margin-right: 9px;
 }
 
+header .nav .sub-menu {
+  display: none;
+  position: absolute;
+  top: 51px;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+}
+
+header .nav .sub-menu .contaniner {
+  padding: 0;
+  padding-bottom: 5px;
+}
+
+header .nav .sub-menu ul {
+  display: flex;
+}
+
+header .nav .sub-menu ul li {
+  position: relative;
+  width: 162px;
+  padding: 17px 0 28px 25px;
+  box-sizing: border-box;
+}
+
+header .nav .sub-menu ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 17px;
+  display: block;
+  width: 1px;
+  height: 250px;
+  background-color: #eee;
+  opacity: 0.8;
+}
+
+header .nav .sub-menu ul li:first-child {
+  width: 137px;
+  padding-left: 0;
+}
+
+header .nav .sub-menu ul li:first-child:before {
+  width: 0;
+}
+
+header .nav .sub-menu ul li a {
+  display: block;
+  font-size: 14px;
+  line-height: 2.143em;
+}
+
+header .nav .sub-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+header .nav .sub-menu ul li a.strong {
+  font-weight: 700;
+  color: #222;
+  line-height: 1.429em;
+  margin-bottom: 8px;
+}
+
+header .nav .sub-menu ul li a.arrowR:after {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  margin-left: 4px;
+  background: transparent url(/assets/img/arrowR_5x9.png) center / 5px 9px scroll no-repeat;
+}
+
 header .nav.fixed {
   position: fixed;
   top: 0px;
@@ -181,6 +253,10 @@ header .nav.fixed {
   border: none;
   box-sizing: border-box;
   height: 60px;
+}
+
+header .nav.fixed .contaniner {
+  padding: 0;
 }
 
 header .nav.fixed .contaniner > a {
@@ -216,6 +292,19 @@ header .nav.fixed .search_wrap button {
 header .nav.fixed .search_wrap:before, header .nav.fixed .search_wrap:after {
   background-color: #000;
   opacity: 0.2;
+}
+
+header .nav.fixed .sub-menu {
+  top: 60px;
+  border-bottom: 1px solid #a58e8e;
+}
+
+header .nav.fixed .sub-menu .contaniner {
+  padding-bottom: 9px;
+}
+
+header .nav.fixed .sub-menu ul li {
+  padding: 13px 0 28px 25px;
 }
 /* header end */
 
