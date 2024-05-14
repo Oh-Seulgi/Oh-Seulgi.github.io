@@ -1186,9 +1186,10 @@ footer .footer_info .familysite_wrap a {
 .fixedBtn_wrap {
   position: fixed;
   bottom: 80px;
-  width: 100%;
   height: 50px;
   z-index: 7;
+  right: 50%;
+  margin-right: -548px;
 }
 
 .fixedBtn_wrap .contaniner {
@@ -1198,7 +1199,7 @@ footer .footer_info .familysite_wrap a {
 
 .fixedBtn_wrap .btn_ticketing {
   position: absolute;
-  right: -58px;
+  right: 0;
   display: inline-block;
   text-align: center;
   width: 136px;
@@ -1215,13 +1216,13 @@ footer .footer_info .familysite_wrap a {
 }
 
 .fixedBtn_wrap.active .btn_ticketing {
-  right: 0;
+  right: 58px;
   opacity: 1;
 }
 
 .fixedBtn_wrap .btn_gotoTop {
   position: absolute;
-  right: -58px;
+  right: 0;
   display: inline-block;
   width: 48px;
   height: 48px;

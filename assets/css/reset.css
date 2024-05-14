@@ -176,12 +176,14 @@ dl:after, ul:after, ol:after{ content:''; clear:both; display:block;}
 
 .swiper-button-prev {
   left: -20px;
+  z-index: 6;
 }
 
 .swiper-button-next {
   right: -20px;
   transform: rotate(-180deg);
   box-shadow: -2px -2px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 6;
 }
 
 .swiper-button-prev:after, 
