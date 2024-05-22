@@ -5,44 +5,44 @@
   font-style: normal;
   font-weight: 300;
   src: local("Noto Sans KR"); /* computer */
-  src: url("/assets/font/NotoSansKR-Light.otf");
-  src: url("/assets/font/NotoSansKR-Light.eot?#iefix") format('embedded-opentype');
-  src: url("/assets/font/NotoSansKR-Light.woff2") format("woff2"); /* Modern Browsers */
-  src: url("/assets/font/NotoSansKR-Light.woff") format("woff"); /* Modern Browsers */
-  src: url("/assets/font/NotoSansKR-Light.otf") format("opentype");
+  src: url("assets/font/NotoSansKR-Light.otf");
+  src: url("assets/font/NotoSansKR-Light.eot?#iefix") format('embedded-opentype');
+  src: url("assets/font/NotoSansKR-Light.woff2") format("woff2"); /* Modern Browsers */
+  src: url("assets/font/NotoSansKR-Light.woff") format("woff"); /* Modern Browsers */
+  src: url("assets/font/NotoSansKR-Light.otf") format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 400;
   src: local("Noto Sans KR"); /* computer */
-  src: url("/assets/font/NotoSansKR-Regular.eot");
-  src: url("/assets/font/NotoSansKR-Regular.eot?#iefix") format('embedded-opentype');
-  src: url("/assets/font/NotoSansKR-Regular.woff2") format("woff2"); /* Modern Browsers */
-  src: url("/assets/font/NotoSansKR-Regular.woff") format("woff"); /* Modern Browsers */
-  src: url("/assets/font/NotoSansKR-Regular.otf") format("opentype");
+  src: url("assets/font/NotoSansKR-Regular.eot");
+  src: url("assets/font/NotoSansKR-Regular.eot?#iefix") format('embedded-opentype');
+  src: url("assets/font/NotoSansKR-Regular.woff2") format("woff2"); /* Modern Browsers */
+  src: url("assets/font/NotoSansKR-Regular.woff") format("woff"); /* Modern Browsers */
+  src: url("assets/font/NotoSansKR-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 500;
   src: local("Noto Sans KR"); /* computer */
-  src: url("/assets/font/NotoSansKR-Medium.eot");
-  src: url("/assets/font/NotoSansKR-Medium.eot?#iefix") format('embedded-opentype');
-  src: url("/assets/font/NotoSansKR-Medium.woff2") format("woff2"); /* Modern Browsers */
-  src: url("/assets/font/NotoSansKR-Medium.woff") format("woff"); /* Modern Browsers */
-  src: url("/assets/font/NotoSansKR-Medium.otf") format("opentype");
+  src: url("assets/font/NotoSansKR-Medium.eot");
+  src: url("assets/font/NotoSansKR-Medium.eot?#iefix") format('embedded-opentype');
+  src: url("assets/font/NotoSansKR-Medium.woff2") format("woff2"); /* Modern Browsers */
+  src: url("assets/font/NotoSansKR-Medium.woff") format("woff"); /* Modern Browsers */
+  src: url("assets/font/NotoSansKR-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 700;
   src: local("Noto Sans KR"); /* computer */
-  src: url("/assets/font/NotoSansKR-Bold.eot");
-  src: url("/assets/font/NotoSansKR-Bold.eot?#iefix") format('embedded-opentype');
-  src: url("/assets/font/NotoSansKR-Bold.woff2") format("woff2"); /* Modern Browsers */
-  src: url("/assets/font/NotoSansKR-Bold.woff") format("woff"); /* Modern Browsers */
-  src: url("/assets/font/NotoSansKR-Bold.otf") format("opentype");
+  src: url("assets/font/NotoSansKR-Bold.eot");
+  src: url("assets/font/NotoSansKR-Bold.eot?#iefix") format('embedded-opentype');
+  src: url("assets/font/NotoSansKR-Bold.woff2") format("woff2"); /* Modern Browsers */
+  src: url("assets/font/NotoSansKR-Bold.woff") format("woff"); /* Modern Browsers */
+  src: url("assets/font/NotoSansKR-Bold.otf") format("opentype");
 }
 
 @font-face {
@@ -50,8 +50,8 @@
   font-style: normal;
   font-weight: 400;
   src: local("Noto Serif KR");
-  src: url("/assets/font/NotoSerifKR-Regular.woff2") format('woff2');
-  src: url("/assets/font/NotoSerifKR-Regular.otf") format("opentype");
+  src: url("assets/font/NotoSerifKR-Regular.woff2") format('woff2');
+  src: url("assets/font/NotoSerifKR-Regular.otf") format("opentype");
 }
 
 /* devanagari */
@@ -220,6 +220,6 @@
   font-family: 'Nanum Myeongjo';
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/font/NanumMyeongjo.eot");
-  src: url("/assets/font/NanumMyeongjo.?#iefix") format("embedded-opentype"), url("/assets/font/NanumMyeongjo.woff") format("woff"), url("/assets/font/NanumMyeongjo.ttf") format("truetype");
+  src: url("assets/font/NanumMyeongjo.eot");
+  src: url("assets/font/NanumMyeongjo.?#iefix") format("embedded-opentype"), url("assets/font/NanumMyeongjo.woff") format("woff"), url("assets/font/NanumMyeongjo.ttf") format("truetype");
 }
